@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        .text {
+            color: white;
+        }
+
+        .text:hover {
+            color: black;
+        }
+        .text1:hover {
+            color: #e83e8c;
+        }
+        .text1 {
+            color: white;
+        }
+        .icon{
+            width: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container-fluid" style="background: #e83e8c">
+    <div class="container">
+        <div class="row " style="height: 90px;align-items: center">
+            <div class="col-2"><img src="https://d2eajpoqaqhimg.cloudfront.net/content/dam/midea-aem/vn/where-to-buy/mediamart.png  " alt=""
+                                    style="background: #e83e8c;width: 100%;height: 100%">
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-2 my-3">
+                        <i style="font-size: 20px;color: white ; float: left" class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="col-10 text">
+                        <b>070 272 1099</b><br>
+                        <span>Tư vấn </span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-2 my-3">
+                        <i style="font-size: 20px;color: white ; float: left" class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="col-10 text">
+                        <a href="" class="text">
+                            <b>295 Nguyễn Tất thành</b><br>
+                            <span>Mở của 9:00 - 21:30</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 text">
+                <i class="fa-solid fa-bag-shopping " style="font-size: 25px"></i>
+                <span>Giỏ hàng</span>
+            </div>
+            <div class="col-3" style="display: flex;align-items: center">
+                <input class="form-control form-control-sm w-75 " type="text" placeholder="Bạn tìm gì ..."
+                       aria-label=".form-control-sm example"><a href="" class="text"><i class="fas fa-search mx-3"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-dark bg-dark row">
+        <div class="col-3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false"><span class="navbar-toggler-icon"></span>
+
+                    Danh sách sản phẩm
+
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="https://mediamart.vn/soundbar"><img class="icon" src="https://cdn.mediamart.vn/images/menu/tivi-loa---am-thanh_51500480.png" alt="">  Tivi</a></li>
+                    <li><a class="dropdown-item" href="https://mediamart.vn/laptop?f=laptop-gaming"><img class="icon" src="https://cdn.mediamart.vn/images/menu/laptop-laptop-gaming_82186093.png" alt="">   Máy tính</a></li>
+                    <li><a class="dropdown-item" href="https://mediamart.vn/may-giat"><img class="icon" src="https://cdn.mediamart.vn/images/menu/may-git-may-sy-qun-ao_b8027e4e.png" alt=""> Máy giặt</a></li>
+                    <li><a class="dropdown-item" href="#"><img class="icon" src="https://cdn.mediamart.vn/images/menu/sinh-t---ep---trn_c4590e67.jpg" alt=""> Máy sinh tố</a></li>
+                    <li><a class="dropdown-item" href="#"><img class="icon" src="https://cdn.mediamart.vn/images/menu/qut-mat---qut-diu-hoa_e4955f46.jpg" alt=""> Máy quạt</a></li>
+                    <li><a class="dropdown-item" href="https://mediamart.vn/dieu-hoa-nhiet-do"><img class="icon" src="https://cdn.mediamart.vn/images/menu/diu-hoa-nhit-d_f3477983.png" alt=""> Điều hòa</a></li>
+                    <li><a class="dropdown-item" href="#"><img class="icon" src="https://cdn.mediamart.vn/images/menu/span-stylecolor0033ff-importantni-com-dinspan_6a027121.jpg" alt=""> Nồi cơm điện</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="col-2 text1">Tivi</div>
+                <div class="col-2 text1">Tủ lạnh</div>
+                <div class="col-2 text1">Điều hòa</div>
+                <div class="col-2 text1">Gia dụng</div>
+                <div class="col-2 text1">Điện thoại</div>
+                <div class="col-2 text1">Laptop</div>
+            </div>
+        </div>
+
+</nav>
+
+
+<!--body-->
+
+<div class="my-3">
+    <h3 class="my-5" style="text-align: center"> Đăng nhập</h3>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="form2Example1" class="form-control"/>
+                    <label class="form-label" for="form2Example1"> Email </label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="form2Example2" class="form-control"/>
+                    <label class="form-label" for="form2Example2">Mật khẩu </label>
+                </div>
+
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked/>
+                            <label class="form-check-label" for="form2Example31"> Nhớ mật khẩu </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <!-- Simple link -->
+                        <a href="#!">Quên mật khẩu?</a>
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <button type="button" class="btn btn-primary btn-block mb-4">Đăng nhập</button>
+
+                <!-- Register buttons -->
+                <div class="text-center">
+                    <p>Chưa có tài khoản? <a href="#!">Đăng ký</a></p>
+                    <p>Hoặc đăng nhập với:</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-google"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+
+
+
+<!--footer-->
+
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Section: Social media -->
+
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+            <form action="">
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+
+                    <div class="col-md-5 col-12">
+                        <!-- Email input -->
+                        <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example21" class="form-control" />
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-auto">
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-outline-light mb-4">
+                            Đăng ký
+                        </button>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </form>
+        </section>
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+            ></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+            ></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-github"></i
+            ></a>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022  Công ty Cổ phần MEDIAMART Việt Nam
+        <a class="text-white" href="https://codegym.vn/">CodeGym Đà Nẵng</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+<script src="https://kit.fontawesome.com/b29d237812.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</html>
