@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/b29d237812.js" crossorigin="anonymous"></script>
     <style>
-        .btn{
+        .btn-custom {
             border-radius: 0px;
         }
-        .customInput{
+
+        .customInput {
             border-top-width: 1px;
             border-left-width: 1px;
             border-right-width: 1px;
             border-bottom-width: 1px;
+        }
+
+        .table > :not(caption) > * > * {
+
+            border-bottom-width: 0px;
         }
     </style>
 
@@ -28,9 +34,10 @@
 
             <div class="row">
                 <hr>
-                <div class="col-3"style="justify-content: center">
+                <div class="col-3" style="justify-content: center">
 
-                    <img style="width: 70%" src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
+                    <img style="width: 70%"
+                         src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
                          alt="">
 
                     <div style="margin-left: 22%;margin-bottom:10% ">
@@ -39,20 +46,22 @@
                 </div>
                 <div class="col-9">
                     <p>Laptop Lenovo V15 G2 ITL 82KB00QNVN Xám</p>
-                    <p class="card-text "  style="color: darkred;">22.690.000 ₫
+                    <p class="card-text " style="color: darkred;">22.690.000 ₫
                         <strike style="margin:8px 8px">25.900.000<sup><u>đ</u></sup></strike></p>
                     <div style="display: flex;border: 0px">
-                    <button class="btn btn-secondary"> -</button>
-                        <input class="customInput" style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
-                    <button class="btn btn-secondary"> +</button>
+                        <button class="btn btn-custom btn-secondary"> -</button>
+                        <input class="customInput"
+                               style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
+                        <button class="btn btn-custom btn-secondary"> +</button>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <hr>
-                <div class="col-3"style="justify-content: center">
+                <div class="col-3" style="justify-content: center">
 
-                    <img style="width: 70%" src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
+                    <img style="width: 70%"
+                         src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
                          alt="">
 
                     <div style="margin-left: 22%;margin-bottom:10% ">
@@ -61,20 +70,22 @@
                 </div>
                 <div class="col-9">
                     <p>Laptop Lenovo V15 G2 ITL 82KB00QNVN Xám</p>
-                    <p class="card-text "  style="color: darkred;">22.690.000 ₫
+                    <p class="card-text " style="color: darkred;">22.690.000 ₫
                         <strike style="margin:8px 8px">25.900.000<sup><u>đ</u></sup></strike></p>
                     <div style="display: flex;border: 0px">
-                        <button class="btn btn-secondary"> -</button>
-                        <input class="customInput" style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
-                        <button class="btn btn-secondary"> +</button>
+                        <button class="btn btn-custom btn-secondary"> -</button>
+                        <input class="customInput"
+                               style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
+                        <button class="btn btn-custom btn-secondary"> +</button>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <hr>
-                <div class="col-3"style="justify-content: center">
+                <div class="col-3" style="justify-content: center">
 
-                    <img style="width: 70%" src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
+                    <img style="width: 70%"
+                         src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
                          alt="">
 
                     <div style="margin-left: 22%;margin-bottom:10% ">
@@ -83,25 +94,61 @@
                 </div>
                 <div class="col-9">
                     <p>Laptop Lenovo V15 G2 ITL 82KB00QNVN Xám</p>
-                    <p class="card-text "  style="color: darkred;">22.690.000 ₫
+                    <p class="card-text " style="color: darkred;">22.690.000 ₫
                         <strike style="margin:8px 8px">25.900.000<sup><u>đ</u></sup></strike></p>
                     <div style="display: flex;border: 0px">
-                        <button class="btn btn-secondary"> -</button>
-                        <input class="customInput" style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
-                        <button class="btn btn-secondary"> +</button>
+                        <button class="btn btn-custom btn-secondary"> -</button>
+                        <input class="customInput"
+                               style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
+                        <button class="btn btn-custom btn-secondary"> +</button>
                     </div>
                 </div>
             </div>
+            <h3>Ghi chú đơn hàng</h3>
+            <textarea style="width: 100%"></textarea>
 
 
         </div>
         <div class="col-4">
+            <table class="table table-hover">
+
+                <tr>
+                    <th colspan="4" style="text-align: center">TÓM LƯỢC ĐƠN HÀNG</th>
+
+                </tr>
+
+
+                <tr>
+                    <th scope="row">Thành tiền</th>
+                    <td>20 000</td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">Giảm giá</th>
+                    <td>20 000</td>
+
+                </tr>
+                <tr style="border-top-color: black">
+
+                    <th scope="row">Tổng cộng</th>
+                    <td>20 000</td>
+                </tr>
+
+            </table>
+            <button style="width: 100%;font-size: 150%;background-color: #e83e8c" class="btn text-white p-2"><b>Mua
+                nhanh</b></button>
+            <h2 style="text-align: center">Hoặc</h2>
+            <button style="width: 100%;font-size: 150%;background-color: #e83e8c" class="btn text-white p-2"><b>Đăng
+                nhập mua hàng</b></button>
+            <p class="my-2">Mã giảm giá</p>
+            <div >
+            <input type="text" placeholder="Nhập mã giảm giá" style="margin-right: 10px">
+                <button class="btn btn-primary"style="height: 30px;padding-top: 1px;color: black">Áp dụng</button>
+            </div>
 
         </div>
     </div>
-
-
-
 
 
 </div>
