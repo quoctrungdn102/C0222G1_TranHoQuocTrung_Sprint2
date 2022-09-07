@@ -1,0 +1,36 @@
+.hr2:not([size]) {
+  height: 6px;
+  opacity: 5.25;
+}
+
+.text {
+  color: white;
+}
+
+.text:hover {
+  color: black;
+}
+
+.icon {
+  width: 25px;
+}
+
+.text1:hover {
+  color: #e83e8c;
+}
+
+.text1 {
+  color: white;
+}
+
+
+.card-img-top {
+  width: 85%;
+  height: 230px;
+}
+.carousel-control-prev-icon {
+  background-image: url('https://cdn4.iconfinder.com/data/icons/rounded-line-icons/16/icon_left_arrow_circle-512.png');
+}
+.carousel-control-next-icon {
+  background-image: url('https://cdn4.iconfinder.com/data/icons/rounded-line-icons/16/icon_right_arrow_circle_rounded-128.png');
+}

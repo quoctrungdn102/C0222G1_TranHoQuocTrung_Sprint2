@@ -1,0 +1,15 @@
+.btn-custom {
+  border-radius: 0px;
+}
+
+.customInput {
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.table > :not(caption) > * > * {
+
+  border-bottom-width: 0px;
+}

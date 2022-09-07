@@ -1,0 +1,16 @@
+.text {
+  color: white;
+}
+
+.text:hover {
+  color: black;
+}
+.text1:hover {
+  color: #e83e8c;
+}
+.text1 {
+  color: white;
+}
+.icon{
+  width: 25px;
+}
