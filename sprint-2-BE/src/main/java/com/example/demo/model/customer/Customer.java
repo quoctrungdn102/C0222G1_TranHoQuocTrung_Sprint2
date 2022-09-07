@@ -1,6 +1,7 @@
 package com.example.demo.model.customer;
 
-import com.example.demo.model.user.AppUser;
+
+import com.example.demo.model.user1.User;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -27,11 +28,23 @@ public class Customer {
     @Column(name = "email")
     private String email;
 
-    @OneToOne
-    @JoinColumn(name = "user_name", referencedColumnName = "user_name")
-    private AppUser appUser;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "username", referencedColumnName = "username")
+    private User appUser;
 
     public Customer() {
+    }
+
+    public Customer(Integer id, int isDelete, String name, String phoneNumber, String address, String image, int status, String email, User appUser) {
+        this.id = id;
+        this.isDelete = isDelete;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.image = image;
+        this.status = status;
+        this.email = email;
+        this.appUser = appUser;
     }
 
     public Integer getId() {
@@ -98,11 +111,11 @@ public class Customer {
         this.email = email;
     }
 
-    public AppUser getAppUser() {
+    public User getAppUser() {
         return appUser;
     }
 
-    public void setAppUser(AppUser appUser) {
+    public void setAppUser(User appUser) {
         this.appUser = appUser;
     }
 }
