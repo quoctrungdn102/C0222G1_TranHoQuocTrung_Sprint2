@@ -33,18 +33,23 @@
           </div>
         </div>
       </div>
-      <div class="col-2 text">
-        <a routerLink="/cart"><i class="fa-solid fa-bag-shopping " style="font-size: 25px"></i>
-        <span>Giỏ hàng</span>
-        </a>
+      <div class="col-2 text" (click)="Cart()">
+        <div><i class="fa-solid fa-bag-shopping " style="font-size: 25px"></i>
+        <span style="margin-left: 5px">Giỏ hàng</span>
+        </div>
       </div>
       <div class="col-3" style="display: flex;align-items: center">
         <input class="form-control form-control-sm w-50 " type="text" placeholder="Bạn tìm gì ..."
                aria-label=".form-control-sm example"><a href="" class="text "><i
         class="fas fa-search mx-3 "></i></a>
-        <div class=" text">
+        <div *ngIf="status==null" class=" text">
           <a routerLink="/login" class="text">
             <b>Đăng nhập</b><br>
+          </a>
+        </div>
+        <div *ngIf="status=='login'" class=" text" (click)="statusLogin()">
+          <a routerLink="/login" class="text">
+            <b>Thoát</b><br>
           </a>
         </div>
       </div>
