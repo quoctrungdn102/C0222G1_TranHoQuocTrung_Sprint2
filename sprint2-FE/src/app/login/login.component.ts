@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {LoginService} from './login.service';
 import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   });
 
   constructor(private loginService: LoginService, private router: Router,
- private toast : ToastrService) {
+ private toast : ToastrService,private authService : AuthService) {
   }
 
   ngOnInit(): void {
