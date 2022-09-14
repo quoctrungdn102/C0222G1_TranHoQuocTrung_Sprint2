@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HomePageService} from '../service/home-page.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -7,10 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-shop.component.css']
 })
 export class HomeShopComponent implements OnInit {
-
-  constructor() { }
+ListProduct : any;
+  constructor( private homeService : HomePageService,private router : Router) {}
 
   ngOnInit(): void {
+    this.getAllProduct();
+
   }
 
+  getAllProduct(){
+    this.homeService.getAllProduct().subscribe(value => {
+      this.ListProduct = value;
+    })
+  }
+
+  buyProduct() {
+
+  }
+
+  getIdProduct(id: any) {
+    // console.log(id);
+    this.router.navigateByUrl('detailProduct/'+id);
+  }
+
+  checkboxSearch(id : number) {
+    console.log(id);
+    this.homeService.searchProduct(id).subscribe(value => {
+     this.ListProduct = value;
+    })
+  }
 }

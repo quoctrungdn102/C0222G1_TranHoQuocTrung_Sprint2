@@ -3,75 +3,28 @@
   <div class="row">
     <div class="col-8">
 
-      <div class="row">
+      <div class="row" *ngFor="let tem of listCart">
         <hr>
         <div class="col-3" style="justify-content: center">
 
           <img style="width: 70%"
-               src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
+               src="{{tem.product.image}}"
                alt="">
 
           <div style="margin-left: 22%;margin-bottom:10% ">
-            <button class="btn btn-danger" style="font-size:100% "> X</button>
+            <button class="btn btn-danger" style="font-size:100% " (click)="deleteCart(tem)"> X</button>
           </div>
         </div>
         <div class="col-9">
-          <p>Laptop Lenovo V15 G2 ITL 82KB00QNVN Xám</p>
-          <p class="card-text " style="color: darkred;">22.690.000 ₫
-            <del style="margin:8px 8px">25.900.000<sup><u>đ</u></sup></del></p>
+          <p>{{tem.product.name}}</p>
+          <p class="card-text " style="color: darkred;">{{tem.product.price|number}}<u>đ</u>
+            <del style="margin:8px 8px">{{tem.product.price+2000000|number}}<sup><u>đ</u></sup></del></p>
+
           <div style="display: flex;border: 0px">
-            <button class="btn btn-custom btn-secondary"> -</button>
-            <input class="customInput"
-                   style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
-            <button class="btn btn-custom btn-secondary"> +</button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <hr>
-        <div class="col-3" style="justify-content: center">
-
-          <img style="width: 70%"
-               src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
-               alt="">
-
-          <div style="margin-left: 22%;margin-bottom:10% ">
-            <button class="btn btn-danger" style="font-size:100% "> X</button>
-          </div>
-        </div>
-        <div class="col-9">
-          <p>Laptop Lenovo V15 G2 ITL 82KB00QNVN Xám</p>
-          <p class="card-text " style="color: darkred;">22.690.000 ₫
-            <del style="margin:8px 8px">25.900.000<sup><u>đ</u></sup></del></p>
-          <div style="display: flex;border: 0px">
-            <button class="btn btn-custom btn-secondary"> -</button>
-            <input class="customInput"
-                   style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
-            <button class="btn btn-custom btn-secondary"> +</button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <hr>
-        <div class="col-3" style="justify-content: center">
-
-          <img style="width: 70%"
-               src="https://cdn.mediamart.vn/images/product/laptop-lenovo-v15-g2-itl-82kb00qnvn-xam_4a3dd617.webp"
-               alt="">
-
-          <div style="margin-left: 22%;margin-bottom:10% ">
-            <button class="btn btn-danger" style="font-size:100% "> X</button>
-          </div>
-        </div>
-        <div class="col-9">
-          <p>Laptop Lenovo V15 G2 ITL 82KB00QNVN Xám</p>
-          <p class="card-text " style="color: darkred;">22.690.000 ₫
-            <del style="margin:8px 8px">25.900.000<sup><u>đ</u></sup></del></p>
-          <div style="display: flex;border: 0px">
-            <button class="btn btn-custom btn-secondary"> -</button>
-            <input class="customInput"
-                   style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d" readonly>
-            <button class="btn btn-custom btn-secondary"> +</button>
+            <button class="btn btn-custom btn-secondary" (click)="subtraction(tem.product)"> -</button>
+            <input  value="{{tem.quality}}" class="customInput"
+                   style="width: 35px; z-index:-100; border-radius: 0px;border-color: #6c757d;text-align: center" readonly>
+            <button class="btn btn-custom btn-secondary" (click)="plus(tem.product)"> +</button>
           </div>
         </div>
       </div>
@@ -91,19 +44,19 @@
 
         <tr>
           <th scope="row">Thành tiền</th>
-          <td>20 000</td>
+          <td>{{total|number}}<sup><u>đ</u></sup></td>
         </tr>
 
 
         <tr>
           <th scope="row">Giảm giá</th>
-          <td>20 000</td>
+          <td>200.000</td>
 
         </tr>
         <tr style="border-top-color: black">
 
           <th scope="row">Tổng cộng</th>
-          <td>20 000</td>
+          <td>{{total-200000|number}}<sup><u>đ</u></sup></td>
         </tr>
 
       </table>

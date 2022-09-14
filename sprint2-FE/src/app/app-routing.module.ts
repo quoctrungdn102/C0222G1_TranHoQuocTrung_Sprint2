@@ -5,6 +5,7 @@ import {HomeShopComponent} from './home-shop/home-shop.component';
 import {DetailProductComponent} from './detail-product/detail-product.component';
 import {CartComponent} from './cart/cart.component';
 import {AuthGuard} from './auth-guard';
+import {Err403Component} from './err403/err403.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,13 @@ const routes: Routes = [
     path: 'detail', component: DetailProductComponent,
   },
   {
-    path: 'cart', component: CartComponent,canActivate:[AuthGuard]
+    path: '403', component: Err403Component,
+  },
+  {
+    path: 'detailProduct/:id', component: DetailProductComponent,
+  },
+  {
+    path: 'cart', component: CartComponent,canActivate : [AuthGuard]
   }];
 
 @NgModule({

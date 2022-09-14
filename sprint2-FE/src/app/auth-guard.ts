@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate{
     if (this.athService.isAuthenticated()) {
       return true;
     } else {
-      this.router.navigate(['']);
+      this.router.navigate(['403']);
       this.toast.error("vui lòng đăng nhập")
       return false;
     }

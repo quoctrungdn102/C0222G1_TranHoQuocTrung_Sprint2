@@ -23,14 +23,22 @@
   color: white;
 }
 
+.card:hover img.card-img-top {
+
+  transition: 1s;
+  margin-top: 20px;
+}
+
 
 .card-img-top {
   width: 85%;
   height: 230px;
 }
+
 .carousel-control-prev-icon {
   background-image: url('https://cdn4.iconfinder.com/data/icons/rounded-line-icons/16/icon_left_arrow_circle-512.png');
 }
+
 .carousel-control-next-icon {
   background-image: url('https://cdn4.iconfinder.com/data/icons/rounded-line-icons/16/icon_right_arrow_circle_rounded-128.png');
 }

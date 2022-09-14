@@ -13,6 +13,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
+import { Err403Component } from './err403/err403.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import {ToastrModule} from 'ngx-toastr';
     DetailProductComponent,
     CartComponent,
     LoginComponent,
+    Err403Component,
   ],
   imports: [
     BrowserModule,

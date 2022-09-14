@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   loginSubmit() {
     this.loginService.login(this.formLogin.value).subscribe((value: any) => {
       console.log(value.name);
-      localStorage.setItem(value.name, value.token);
+      localStorage.setItem('getCustomer',value.name);
       localStorage.setItem('status', 'login');
       const role = localStorage.getItem(value.name);
       // for (let i = 0; i < role.length; i++) {

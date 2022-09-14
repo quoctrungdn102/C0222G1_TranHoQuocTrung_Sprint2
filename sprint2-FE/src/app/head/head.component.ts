@@ -29,6 +29,7 @@ export class HeadComponent implements OnInit {
 
   statusLogin() {
     localStorage.removeItem("status");
+    localStorage.removeItem("getCustomer");
     window.location.href = 'http://localhost:4200/home-shop'
   }
 }
