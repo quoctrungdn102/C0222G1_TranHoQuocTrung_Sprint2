@@ -19,7 +19,7 @@ public class Promotion {
     private int isDelete = 0;
 
     @OneToMany(mappedBy = "promotion")
-    @JsonBackReference
+    @JsonBackReference("promotion")
     private Set<Product> products;
 
     public Promotion() {

@@ -2,7 +2,7 @@ package com.example.demo.jwt;
 
 
 import com.example.demo.model.user1.User;
-import com.example.demo.repository.IRepoUser;
+import com.example.demo.repository.repositoryUser.IRepoUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

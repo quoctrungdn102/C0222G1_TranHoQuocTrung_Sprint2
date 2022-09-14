@@ -4,7 +4,6 @@ package com.example.demo.model.customer;
 import com.example.demo.model.user1.User;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 public class Customer {

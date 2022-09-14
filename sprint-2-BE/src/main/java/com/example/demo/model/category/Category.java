@@ -18,11 +18,21 @@ public class Category {
     @Column(name = "is_deleted")
     private int isDelete = 0;
 
+    private String logo;
+
     @OneToMany(mappedBy = "category")
-    @JsonBackReference
+    @JsonBackReference("category")
     private Set<Product> products;
 
     public Category() {
+    }
+
+    public Category(Integer id, String name, int isDelete, String logo, Set<Product> products) {
+        this.id = id;
+        this.name = name;
+        this.isDelete = isDelete;
+        this.logo = logo;
+        this.products = products;
     }
 
     public Integer getId() {
@@ -47,6 +57,14 @@ public class Category {
 
     public void setIsDelete(int isDelete) {
         this.isDelete = isDelete;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
     public Set<Product> getProducts() {

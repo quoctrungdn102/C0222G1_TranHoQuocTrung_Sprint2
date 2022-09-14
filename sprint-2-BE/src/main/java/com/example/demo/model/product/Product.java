@@ -2,8 +2,9 @@ package com.example.demo.model.product;
 
 import com.example.demo.model.category.Category;
 import com.example.demo.model.coupon.Coupon;
+import com.example.demo.model.order.Cart;
 import com.example.demo.model.promotion.Promotion;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -18,14 +19,10 @@ public class Product {
     private int isDelete;
     @Column(name = "name")
     private String name;
-    @Column(name = "operating_system")
-    private String operatingSystem;
     @Column(name = "cpu")
     private String cpu;
     @Column(name = "ram")
     private String ram;
-    @Column(name = "camera")
-    private String camera;
     @Column(name = "screen_resolution")
     private String screenResolution;
     @Column(name = "release_time")
@@ -34,11 +31,10 @@ public class Product {
     private String graphicCard;
     @Column(name = "price")
     private double price;
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition = "varchar(1000)")
     private String description;
     @Column(name = "image")
     private String image;
-
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
@@ -48,16 +44,36 @@ public class Product {
     private Promotion promotion;
 
     @OneToMany(mappedBy = "product")
-    @JsonIgnore
+    @JsonBackReference("product")
     private Set<Coupon> couponSet;
 
-    public Set<Coupon> getCouponSet() {
+    @OneToMany(mappedBy = "product")
+    @JsonBackReference("product1")
+    private Set<Cart> cartSet;
 
-        return couponSet;
+
+
+
+
+    public Product() {
     }
 
-    public void setCouponSet(Set<Coupon> couponSet) {
+    public Product(Integer id, int isDelete, String name, String cpu, String ram, String screenResolution, String releaseTime, String graphicCard, double price, String description, String image, Category category, Promotion promotion, Set<Coupon> couponSet, Set<Cart> cartSet) {
+        this.id = id;
+        this.isDelete = isDelete;
+        this.name = name;
+        this.cpu = cpu;
+        this.ram = ram;
+        this.screenResolution = screenResolution;
+        this.releaseTime = releaseTime;
+        this.graphicCard = graphicCard;
+        this.price = price;
+        this.description = description;
+        this.image = image;
+        this.category = category;
+        this.promotion = promotion;
         this.couponSet = couponSet;
+        this.cartSet = cartSet;
     }
 
     public Integer getId() {
@@ -84,14 +100,6 @@ public class Product {
         this.name = name;
     }
 
-    public String getOperatingSystem() {
-        return operatingSystem;
-    }
-
-    public void setOperatingSystem(String operatingSystem) {
-        this.operatingSystem = operatingSystem;
-    }
-
     public String getCpu() {
         return cpu;
     }
@@ -106,14 +114,6 @@ public class Product {
 
     public void setRam(String ram) {
         this.ram = ram;
-    }
-
-    public String getCamera() {
-        return camera;
-    }
-
-    public void setCamera(String camera) {
-        this.camera = camera;
     }
 
     public String getScreenResolution() {
@@ -178,5 +178,21 @@ public class Product {
 
     public void setPromotion(Promotion promotion) {
         this.promotion = promotion;
+    }
+
+    public Set<Coupon> getCouponSet() {
+        return couponSet;
+    }
+
+    public void setCouponSet(Set<Coupon> couponSet) {
+        this.couponSet = couponSet;
+    }
+
+    public Set<Cart> getCartSet() {
+        return cartSet;
+    }
+
+    public void setCartSet(Set<Cart> cartSet) {
+        this.cartSet = cartSet;
     }
 }

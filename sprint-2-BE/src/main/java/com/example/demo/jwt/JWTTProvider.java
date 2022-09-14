@@ -44,10 +44,6 @@ public class JWTTProvider {
         }
         return false;
     }
-//    public Boolean validateToken(String token, UserDetails userDetails) {
-//        final String username = getUserNameFromJWT(token);
-//        return (username.equals(userDetails.getUsername()));
-//    }
 
     // Lấy thông tin user từ jwt
     public String getUserNameFromJWT(String token) {
